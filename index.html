@@ -100,33 +100,33 @@
 <!-- Logo -->
 <a href="#home" class="flex items-center gap-2.5 flex-shrink-0 group">
 
-  <img
-    src="apple logo/logo.png"
-    alt="Apple Store Logo"
-    class="w-14 h-14 rounded-xl object-contain bg-white shadow-sm group-hover:scale-105 transition-transform"
-  />
+  
 
-  <div>
-    <span class="font-extrabold text-lg md:text-xl tracking-tight text-[#174978] block leading-none">
-      APPLE STORE
+
+ <img src="apple logo/logo.png" class="w-11 h-11 rounded-xl object-contain bg-white shadow-sm group-hover:scale-105 transition-transform" alt="Apple Store Logo" />
+
+<div>
+    <span class="font-extrabold text-base md:text-lg tracking-tight text-[#174978] block leading-none">
+        APPLE STORE
     </span>
-    <span class="text-[10px] font-bold tracking-[0.2em] text-[#3b8fe6] uppercase block mt-0.5">
-      iPhone &amp; Accessories
+
+    <span class="text-[9px] font-bold tracking-[0.15em] text-[#3b8fe6] uppercase block mt-0.5">
+        iPhone &amp; Accessories
     </span>
-  </div>
+</div>
 
 </a>
 
 
         <!-- Thanh tìm kiếm trực tiếp trên Header -->
-        <div class="flex-1 max-w-md hidden sm:block">
+       <div class="w-56 lg:w-64 xl:w-72 flex-shrink-0 hidden sm:block">
           <div class="relative">
             <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-[#5c7e9e] text-sm"></i>
             <input 
               type="search" 
               id="headerSearchInput" 
               placeholder="Tìm iPhone 18 Pro Max, iPhone Duo, AirPods Pro 3..." 
-              class="w-full bg-[#eaf4ff] hover:bg-[#e3f1ff] focus:bg-white border border-[#c7def7] focus:border-[#3b8fe6] text-[#174978] placeholder-[#6f93b5] rounded-full py-2.5 pl-10 pr-4 text-xs md:text-sm outline-none transition-all"
+              class="w-full h-11 bg-[#eaf4ff] hover:bg-[#e3f1ff] focus:bg-white border border-[#c7def7] focus:border-[#3b8fe6] text-[#174978] placeholder-[#6f93b5] rounded-full py-2.5 pl-10 pr-4 text-sm outline-none transition-all"
             />
           </div>
         </div>
@@ -1516,23 +1516,33 @@ colorImages: {
       const grid = document.getElementById("productGrid");
       const countDisplay = document.getElementById("productCountDisplay");
 
-      // Lọc theo danh mục
-      let filtered = products.filter(p => {
-        const matchFilter =
-          activeFilter === "all" ||
-          (activeFilter === "all-iphone" && p.group === "iphone") ||
-          p.subGroup === activeFilter;
+      // Lọc danh mục và tìm kiếm sản phẩm
+let filtered = products.filter(p => {
+    const q = searchQuery.trim().toLocaleLowerCase("vi");
 
-        const q = searchQuery.toLowerCase().trim();
-        const matchSearch =
-          !q ||
-          p.name.toLowerCase().includes(q) ||
-          p.shortDesc.toLowerCase().includes(q) ||
-          p.specs.toLowerCase().includes(q) ||
-          p.colors.some(c => c.toLowerCase().includes(q));
+    const matchFilter =
+        activeFilter === "all" ||
+        (activeFilter === "all-iphone" && p.group === "iphone") ||
+        p.subGroup === activeFilter;
 
-        return matchFilter && matchSearch;
-      });
+    const searchableText = [
+        p.name,
+        p.shortDesc,
+        p.specs,
+        p.highlights,
+        p.status,
+        ...(p.colors || []),
+        ...(p.storage || []).map(s => s.size)
+    ]
+    .filter(Boolean)
+    .join(" ")
+    .toLocaleLowerCase("vi");
+
+    const matchSearch = !q || searchableText.includes(q);
+
+    // Khi tìm kiếm, cho phép tìm trên toàn bộ sản phẩm
+    return (matchFilter || q !== "") && matchSearch;
+});
 
       // Sắp xếp theo giá của phiên bản đang chọn trên card
       if (sortOrder === "price-asc") {
