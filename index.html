@@ -825,6 +825,7 @@
       "Đen Ánh Thép": "#242426",
       "Vàng": "#F4E5C2",
       "Tía Đậm": "#4B3B54",
+      "Vàng Ánh Sao": "#D4AF37",
       "Trắng": "#FFFFFF"
     };
 
@@ -832,222 +833,353 @@
     const products = [
       // ================= 11 DÒNG IPHONE =================
       {
-        id: 1,
-        name: "iPhone Duo",
-        group: "iphone",
-        subGroup: "duo",
-        label: "Mới • Gập",
-        visualType: "fold",
-        shortDesc: "Màn hình gập OLED 7,6\" & 5,4\" • Chip A20 Pro",
-        image: "images/iphone duo.jpg",
-        colors: ["Đen Bóng Đêm", "Trắng Sao"],
-        storage: [
-          { size: "256GB", price: 64990000 },
-          { size: "512GB", price: 71490000 },
-          { size: "1TB", price: 84490000 },
-          { size: "2TB", price: 103990000 }
-        ],
-        specs: "Màn hình gập OLED Super Retina XDR: 7,6 inch bên trong và 5,4 inch bên ngoài; ProMotion 120Hz; chip A20 Pro; camera kép Fusion 48MP; thiết kế gập khung titan; USB‑C; iOS 27.",
-        highlights: "Mẫu iPhone gập đầu tiên, kết hợp màn hình lớn để đa nhiệm với màn hình ngoài gọn khi gập; phù hợp giải trí, làm việc và sáng tạo nội dung.",
-        status: "Sẵn hàng mới 100% nguyên seal • Bảo hành chính hãng 12 tháng"
-      },
+    id: 1,
+    name: "iPhone Duo",
+    group: "iphone",
+    subGroup: "duo",
+    label: "Mới • Gập",
+    visualType: "fold",
+    shortDesc: "Màn hình gập OLED 7,6\" & 5,4\" • Chip A20 Pro",
+
+    image: "images/iphone duo.jpg",
+
+    colors: ["Đen Bóng Đêm", "Trắng Sao"],
+
+    colorImages: {
+        "Đen Bóng Đêm": "images/duo den.jpg",
+        "Trắng Sao": "images/iphone duo.jpg"
+    },
+
+    storage: [
+        { size: "256GB", price: 64990000 },
+        { size: "512GB", price: 71490000 },
+        { size: "1TB", price: 84490000 },
+        { size: "2TB", price: 103990000 }
+    ],
+
+    specs: "Màn hình gập OLED Super Retina XDR: 7,6 inch bên trong và 5,4 inch bên ngoài; ProMotion 120Hz; chip A20 Pro; camera kép Fusion 48MP; thiết kế gập khung titan; USB‑C; iOS 27.",
+
+    highlights: "Mẫu iPhone gập đầu tiên, kết hợp màn hình lớn để đa nhiệm với màn hình ngoài gọn khi gập; phù hợp giải trí, làm việc và sáng tạo nội dung.",
+
+    status: "Sẵn hàng mới 100% nguyên seal • Bảo hành chính hãng 12 tháng"
+},
       {
-        id: 2,
-        name: "iPhone 18 Pro",
-        group: "iphone",
-        subGroup: "iphone-18",
-        label: "Mới • Pro",
-        visualType: "iphone-pro",
-        shortDesc: "Màn hình 6,3\" 120Hz • Chip A20 Pro • Camera khẩu độ thay đổi",
-        image: "images/Iphone 18 pro.jpg",
-        colors: ["Đen", "Bạc", "Xanh Glacier", "Đỏ Burgundy"],
-        storage: [
-          { size: "256GB", price: 38999000 },
-          { size: "512GB", price: 45499000 },
-          { size: "1TB", price: 58499000 },
-          { size: "2TB", price: 77999000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,3 inch; ProMotion 120Hz; chip A20 Pro; hệ thống camera sau Pro Fusion 48MP gồm camera chính khẩu độ thay đổi, Ultra Wide và Telephoto; camera trước 18MP; USB‑C; IP68.",
-        highlights: "Hiệu năng cao, camera có khẩu độ thay đổi hỗ trợ kiểm soát ánh sáng và độ sâu trường ảnh; phù hợp quay video, chụp ảnh và tác vụ chuyên nghiệp.",
-        status: "Sẵn hàng mới 100% • Hỗ trợ trả góp 0%"
-      },
+    id: 2,
+    name: "iPhone 18 Pro",
+    group: "iphone",
+    subGroup: "iphone-18",
+    label: "Mới • Pro",
+    visualType: "iphone-pro",
+    shortDesc: "Màn hình 6,3\" 120Hz • Chip A20 Pro • Camera khẩu độ thay đổi",
+
+    image: "images/Iphone 18 pro.jpg",
+
+    colors: ["Đen", "Bạc", "Đỏ Burgundy"],
+
+    colorImages: {
+        "Đen": "images/iphone 18 pro den.jpg",
+        "Bạc": "images/iphone 18 pro bac.jpg",
+        "Trắng": "images/Iphone 18 pro.jpg"
+    },
+
+    storage: [
+        { size: "256GB", price: 38999000 },
+        { size: "512GB", price: 45499000 },
+        { size: "1TB", price: 58499000 },
+        { size: "2TB", price: 77999000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,3 inch; ProMotion 120Hz; chip A20 Pro; hệ thống camera sau Pro Fusion 48MP gồm camera chính khẩu độ thay đổi, Ultra Wide và Telephoto; camera trước 18MP; USB‑C; IP68.",
+
+    highlights: "Hiệu năng cao, camera có khẩu độ thay đổi hỗ trợ kiểm soát ánh sáng và độ sâu trường ảnh; phù hợp quay video, chụp ảnh và tác vụ chuyên nghiệp.",
+
+    status: "Sẵn hàng mới 100% • Hỗ trợ trả góp 0%"
+},
       {
-        id: 3,
-        name: "iPhone 18 Pro Max",
-        group: "iphone",
-        subGroup: "iphone-18",
-        label: "Flagship 2026",
-        visualType: "iphone-promax",
-        shortDesc: "Màn hình 6,9\" 120Hz • Chip A20 Pro • Pin siêu bền",
-        image: "images/iphone 18 promax.jpg",
-        colors: ["Đen", "Bạc", "Xanh Glacier", "Đỏ Burgundy"],
-        storage: [
-          { size: "256GB", price: 41999000 },
-          { size: "512GB", price: 48499000 },
-          { size: "1TB", price: 61499000 },
-          { size: "2TB", price: 80999000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,9 inch; ProMotion 120Hz; chip A20 Pro; hệ thống camera sau Pro Fusion 48MP gồm camera chính khẩu độ thay đổi, Ultra Wide và Telephoto; camera trước 18MP; USB‑C; IP68.",
-        highlights: "Màn hình lớn, thời lượng pin nổi bật trong dòng Pro và hệ thống camera cao cấp; phù hợp người thường xuyên quay chụp, xem nội dung và làm việc trên điện thoại.",
-        status: "Sẵn hàng mới 100% • Giao nhanh 2H"
-      },
+    id: 3,
+    name: "iPhone 18 Pro Max",
+    group: "iphone",
+    subGroup: "iphone-18",
+    label: "Flagship 2026",
+    visualType: "iphone-promax",
+    shortDesc: "Màn hình 6,9\" 120Hz • Chip A20 Pro • Pin siêu bền",
+
+    image: "images/Iphone 18 promax.jpg",
+
+    colors: ["Đen", "Bạc", "Đỏ Burgundy"],
+
+    colorImages: {
+        "Đen": "images/iphone 18 pro den.jpg",
+        "Bạc": "images/Iphone 18 promax.jpg",
+        "Đỏ Burgundy": "images/Iphone 18 pro.jpg"
+    },
+
+    storage: [
+        { size: "256GB", price: 41999000 },
+        { size: "512GB", price: 48499000 },
+        { size: "1TB", price: 61499000 },
+        { size: "2TB", price: 80999000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,9 inch; ProMotion 120Hz; chip A20 Pro; hệ thống camera sau Pro Fusion 48MP gồm camera chính khẩu độ thay đổi, Ultra Wide và Telephoto; camera trước 18MP; USB-C; IP68.",
+
+    highlights: "Màn hình lớn, thời lượng pin nổi bật trong dòng Pro và hệ thống camera cao cấp; phù hợp người thường xuyên quay chụp, xem nội dung và làm việc trên điện thoại.",
+
+    status: "Sẵn hàng mới 100% • Giao nhanh 2H"
+},
       {
-        id: 16,
-        name: "iPhone 17 Pro",
-        group: "iphone",
-        subGroup: "iphone-17",
-        label: "Trả góp 0%",
-        visualType: "iphone-pro",
-        shortDesc: "Màn hình 6,3\" 120Hz • Chip A19 Pro • Camera Pro 48MP",
-        image: "images/iphone 17 pro.jpg",
-        colors: ["Bạc", "Cam Vũ Trụ", "Xanh Lam Đậm"],
-        storage: [
-          { size: "256GB", price: 34999000 },
-          { size: "512GB", price: 41449000 },
-          { size: "1TB", price: 47999000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,3 inch; ProMotion 120Hz; chip A19 Pro; hệ thống camera Pro 48MP; camera trước Center Stage 18MP; USB‑C; IP68.",
-        highlights: "Hiệu năng mạnh, hệ thống camera chuyên nghiệp và khả năng quay video định dạng ProRes/ProRes RAW; phù hợp sáng tạo nội dung.",
-        status: "Còn hàng • Bảo hành chính hãng Apple"
-      },
+    id: 16,
+    name: "iPhone 17 Pro",
+    group: "iphone",
+    subGroup: "iphone-17",
+    label: "Trả góp 0%",
+    visualType: "iphone-pro",
+    shortDesc: "Màn hình 6,3\" 120Hz • Chip A19 Pro • Camera Pro 48MP",
+
+    image: "images/iphone 17 pro.jpg",
+
+    colors: ["Xanh Lam Đậm", "Cam Vũ Trụ"],
+
+colorImages: {
+    "Xanh Lam Đậm": "images/iphone 17 pro.jpg",
+    "Cam Vũ Trụ": "images/iphone 17 pro cam.jpg"
+},
+    storage: [
+        { size: "256GB", price: 34999000 },
+        { size: "512GB", price: 41449000 },
+        { size: "1TB", price: 47999000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,3 inch; ProMotion 120Hz; chip A19 Pro; hệ thống camera Pro 48MP; camera trước Center Stage 18MP; USB-C; IP68.",
+
+    highlights: "Hiệu năng mạnh, hệ thống camera chuyên nghiệp và khả năng quay video định dạng ProRes/ProRes RAW; phù hợp sáng tạo nội dung.",
+
+    status: "Còn hàng • Bảo hành chính hãng Apple"
+},
       {
-        id: 17,
-        name: "iPhone 17 Pro Max",
-        group: "iphone",
-        subGroup: "iphone-17",
-        label: "Bán chạy",
-        visualType: "iphone-promax",
-        shortDesc: "Màn hình 6,9\" 120Hz • Chip A19 Pro • Center Stage 18MP",
-        image: "images/iphone 17 promax.jpg",
-        colors: ["Bạc", "Cam Vũ Trụ", "Xanh Lam Đậm"],
-        storage: [
-          { size: "256GB", price: 37999000 },
-          { size: "512GB", price: 44499000 },
-          { size: "1TB", price: 50999000 },
-          { size: "2TB", price: 63999000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,9 inch; ProMotion 120Hz; chip A19 Pro; hệ thống camera Pro 48MP; camera trước Center Stage 18MP; USB‑C; IP68.",
-        highlights: "Màn hình lớn và pin lâu hơn bản Pro; phù hợp người dùng cần không gian hiển thị rộng, quay chụp và sử dụng cường độ cao.",
-        status: "Còn hàng • Trợ giá thu cũ đổi mới"
-      },
+    id: 17,
+    name: "iPhone 17 Pro Max",
+    group: "iphone",
+    subGroup: "iphone-17",
+    label: "Bán chạy",
+    visualType: "iphone-promax",
+    shortDesc: "Màn hình 6,9\" 120Hz • Chip A19 Pro • Center Stage 18MP",
+
+    image: "images/iphone 17 promax.jpg",
+
+    colors: ["Xanh Lam Đậm", "Cam Vũ Trụ"],
+
+    colorImages: {
+        "Xanh Lam Đậm": "images/iphone 17 promax.jpg",
+        "Cam Vũ Trụ": "images/iphone 17 pro cam.jpg"
+    },
+
+    storage: [
+        { size: "256GB", price: 37999000 },
+        { size: "512GB", price: 44499000 },
+        { size: "1TB", price: 50999000 },
+        { size: "2TB", price: 63999000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,9 inch; ProMotion 120Hz; chip A19 Pro; hệ thống camera Pro 48MP; camera trước Center Stage 18MP; USB-C; IP68.",
+
+    highlights: "Màn hình lớn và pin lâu hơn bản Pro; phù hợp người dùng cần không gian hiển thị rộng, quay chụp và sử dụng cường độ cao.",
+
+    status: "Còn hàng • Trợ giá thu cũ đổi mới"
+},
       {
-        id: 18,
-        name: "iPhone 16 Pro",
-        group: "iphone",
-        subGroup: "iphone-16",
-        label: "Pro",
-        visualType: "iphone-pro",
-        shortDesc: "Màn hình 6,3\" • Chip A18 Pro • Zoom quang 5x",
-        image: "images/iphone 16 pro.jpg",
-        colors: ["Titan Đen", "Titan Trắng", "Titan Tự Nhiên", "Titan Sa Mạc"],
-        storage: [
-          { size: "128GB", price: 28990000 },
-          { size: "256GB", price: 31990000 },
-          { size: "512GB", price: 37990000 },
-          { size: "1TB", price: 43990000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,3 inch; ProMotion 120Hz; chip A18 Pro; camera Fusion 48MP, Ultra Wide 48MP và Telephoto 5x 12MP; camera trước 12MP; USB‑C; IP68.",
-        highlights: "Camera Ultra Wide 48MP, zoom quang 5x và Điều Khiển Camera; hỗ trợ quay video chuyên nghiệp, phù hợp chụp ảnh và dựng nội dung.",
-        status: "Còn hàng • Bảo hành 12 tháng"
-      },
+    id: 18,
+    name: "iPhone 16 Pro",
+    group: "iphone",
+    subGroup: "iphone-16",
+    label: "Pro",
+    visualType: "iphone-pro",
+    shortDesc: "Màn hình 6,3\" • Chip A18 Pro • Zoom quang 5x",
+
+    image: "images/iphone 16pro den.jpg",
+
+    colors: ["Titan Đen", "Titan Trắng", "Titan Sa Mạc"],
+
+    colorImages: {
+        "Titan Đen": "images/iphone 16pro den.jpg",
+        "Titan Trắng": "images/iphone 16pro trang.jpg",
+        "Titan Sa Mạc": "images/iphone 16 pro.jpg"
+    },
+
+    storage: [
+        { size: "128GB", price: 28990000 },
+        { size: "256GB", price: 31990000 },
+        { size: "512GB", price: 37990000 },
+        { size: "1TB", price: 43990000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,3 inch; ProMotion 120Hz; chip A18 Pro; camera Fusion 48MP, Ultra Wide 48MP và Telephoto 5x 12MP; camera trước 12MP; USB-C; IP68.",
+
+    highlights: "Camera Ultra Wide 48MP, zoom quang 5x và Điều Khiển Camera; hỗ trợ quay video chuyên nghiệp, phù hợp chụp ảnh và dựng nội dung.",
+
+    status: "Còn hàng • Bảo hành 12 tháng"
+},
       {
-        id: 19,
-        name: "iPhone 16 Pro Max",
-        group: "iphone",
-        subGroup: "iphone-16",
-        label: "Pro Max",
-        visualType: "iphone-promax",
-        shortDesc: "Màn hình 6,9\" • Chip A18 Pro • Điều Khiển Camera",
-        image: "images/iphone 16 promax.jpg",
-        colors: ["Titan Đen", "Titan Trắng", "Titan Tự Nhiên", "Titan Sa Mạc"],
-        storage: [
-          { size: "256GB", price: 34990000 },
-          { size: "512GB", price: 40990000 },
-          { size: "1TB", price: 46990000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,9 inch; ProMotion 120Hz; chip A18 Pro; camera Fusion 48MP, Ultra Wide 48MP và Telephoto 5x 12MP; camera trước 12MP; USB‑C; IP68.",
-        highlights: "Màn hình lớn, zoom quang 5x và thời lượng pin dài; phù hợp người dùng ưu tiên trải nghiệm xem, quay video và chụp ảnh.",
-        status: "Còn hàng • Giao nhanh 2H"
-      },
+    id: 19,
+    name: "iPhone 16 Pro Max",
+    group: "iphone",
+    subGroup: "iphone-16",
+    label: "Pro Max",
+    visualType: "iphone-promax",
+    shortDesc: "Màn hình 6,9\" • Chip A18 Pro • Điều Khiển Camera",
+
+    image: "images/iphone 16 promax.jpg",
+
+    colors: ["Titan Đen", "Titan Trắng", "Titan Sa Mạc"],
+
+    colorImages: {
+        "Titan Đen": "images/iphone 16 promax.jpg",
+        "Titan Trắng": "images/iphone 16pro trang.jpg",
+        "Titan Sa Mạc": "images/iphone 16 pro.jpg"
+    },
+
+    storage: [
+        { size: "256GB", price: 34990000 },
+        { size: "512GB", price: 40990000 },
+        { size: "1TB", price: 46990000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,9 inch; ProMotion 120Hz; chip A18 Pro; camera Fusion 48MP, Ultra Wide 48MP và Telephoto 5x 12MP; camera trước 12MP; USB-C; IP68.",
+
+    highlights: "Màn hình lớn, zoom quang 5x và thời lượng pin dài; phù hợp người dùng ưu tiên trải nghiệm xem, quay video và chụp ảnh.",
+
+    status: "Còn hàng • Giao nhanh 2H"
+},
+     {
+    id: 20,
+    name: "iPhone 15 Pro",
+    group: "iphone",
+    subGroup: "iphone-15-14",
+    label: "Khung Titan",
+    visualType: "iphone-pro",
+    shortDesc: "Màn hình 6,1\" • Chip A17 Pro • USB-C tốc độ cao",
+
+    image: "images/ip 15 pro den.jpg",
+
+    colors: ["Titan Đen", "Titan Trắng", "Titan Xanh"],
+
+    colorImages: {
+        "Titan Đen": "images/ip 15 pro den.jpg",
+        "Titan Trắng": "images/ip 15 pro trang.jpg",
+        "Titan Xanh": "images/iphone 15 pro.jpg"
+    },
+
+    storage: [
+        { size: "128GB", price: 18990000 },
+        { size: "256GB", price: 20190000 },
+        { size: "512GB", price: 20990000 },
+        { size: "1TB", price: 21890000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,1 inch; ProMotion 120Hz; chip A17 Pro; camera chính 48MP, Ultra Wide 12MP và Telephoto 3x 12MP; camera trước 12MP; cổng USB-C hỗ trợ USB 3; khung titan; IP68.",
+
+    highlights: "Thiết kế titan nhẹ, nút Tác Vụ, cổng USB-C và khả năng quay video ProRes; phù hợp người dùng cần hiệu năng Pro trong thân máy gọn.",
+
+    status: "Còn hàng • Giá tốt nhất phân khúc"
+},
+     {
+    id: 21,
+    name: "iPhone 15 Pro Max",
+    group: "iphone",
+    subGroup: "iphone-15-14",
+    label: "Giá tốt",
+    visualType: "iphone-promax",
+    shortDesc: "Màn hình 6,7\" • Chip A17 Pro • Zoom Tetraprism 5x",
+
+    image: "images/iphone 15 promax.jpg",
+
+    colors: ["Titan Đen", "Titan Trắng", "Titan Xanh", "Titan Tự Nhiên"],
+
+    colorImages: {
+        "Titan Đen": "images/ip 15 pro den.jpg",
+        "Titan Trắng": "images/ip 15 pro trang.jpg",
+        "Titan Xanh": "images/iphone 15 pro.jpg",
+        "Titan Tự Nhiên": "images/iphone 15 promax.jpg"
+    },
+
+    storage: [
+        { size: "256GB", price: 22990000 },
+        { size: "512GB", price: 23990000 },
+        { size: "1TB", price: 25590000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,7 inch; ProMotion 120Hz; chip A17 Pro; camera chính 48MP, Ultra Wide 12MP và Telephoto tetraprism 5x 12MP; camera trước 12MP; USB-C; khung titan; IP68.",
+
+    highlights: "Zoom quang 5x, màn hình lớn và thiết kế titan; phù hợp chụp ảnh xa, quay video và giải trí.",
+
+    status: "Còn hàng • Hỗ trợ trả góp 0%"
+},
       {
-        id: 20,
-        name: "iPhone 15 Pro",
-        group: "iphone",
-        subGroup: "iphone-15-14",
-        label: "Khung Titan",
-        visualType: "iphone-pro",
-        shortDesc: "Màn hình 6,1\" • Chip A17 Pro • USB-C tốc độ cao",
-        image: "images/iphone 15 pro.jpg",
-        colors: ["Titan Đen", "Titan Trắng", "Titan Xanh", "Titan Tự Nhiên"],
-        storage: [
-          { size: "128GB", price: 18990000 },
-          { size: "256GB", price: 20190000 },
-          { size: "512GB", price: 20990000 },
-          { size: "1TB", price: 21890000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,1 inch; ProMotion 120Hz; chip A17 Pro; camera chính 48MP, Ultra Wide 12MP và Telephoto 3x 12MP; camera trước 12MP; cổng USB‑C hỗ trợ USB 3; khung titan; IP68.",
-        highlights: "Thiết kế titan nhẹ, nút Tác Vụ, cổng USB‑C và khả năng quay video ProRes; phù hợp người dùng cần hiệu năng Pro trong thân máy gọn.",
-        status: "Còn hàng • Giá tốt nhất phân khúc"
-      },
+    id: 22,
+    name: "iPhone 14 Pro",
+    group: "iphone",
+    subGroup: "iphone-15-14",
+    label: "Tiết kiệm",
+    visualType: "iphone-pro",
+    shortDesc: "Màn hình 6,1\" Dynamic Island • Chip A16 Bionic",
+
+    image: "images/ip 14 pro den.jpg",
+
+    colors: ["Đen Ánh Thép", "Bạc", "Vàng", "Tía Đậm"],
+
+    colorImages: {
+        "Đen Ánh Thép": "images/ip 14 pro den.jpg",
+        "Bạc": "images/ip 14 pro bac.jpg",
+        "Vàng": "images/ip 14 pro vang.jpg",
+        "Tía Đậm": "images/iphone 14 pro.jpg"
+    },
+
+    storage: [
+        { size: "128GB", price: 14690000 },
+        { size: "256GB", price: 15890000 },
+        { size: "512GB", price: 17290000 },
+        { size: "1TB", price: 17990000 }
+    ],
+
+    specs: "Màn hình OLED Super Retina XDR 6,1 inch; ProMotion 120Hz; chip A16 Bionic; camera chính 48MP, Ultra Wide 12MP và Telephoto 3x 12MP; camera trước 12MP; cổng Lightning; IP68.",
+
+    highlights: "Dynamic Island, màn hình Luôn Bật và camera chính 48MP; là lựa chọn dòng Pro với mức giá dễ tiếp cận hơn.",
+
+    status: "Còn hàng • Bảo hành đầy đủ"
+},
       {
-        id: 21,
-        name: "iPhone 15 Pro Max",
-        group: "iphone",
-        subGroup: "iphone-15-14",
-        label: "Giá tốt",
-        visualType: "iphone-promax",
-        shortDesc: "Màn hình 6,7\" • Chip A17 Pro • Zoom Tetraprism 5x",
-        image: "images/iphone 15 promax.jpg",
-        colors: ["Titan Đen", "Titan Trắng", "Titan Xanh", "Titan Tự Nhiên"],
-        storage: [
-          { size: "256GB", price: 22990000 },
-          { size: "512GB", price: 23990000 },
-          { size: "1TB", price: 25590000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,7 inch; ProMotion 120Hz; chip A17 Pro; camera chính 48MP, Ultra Wide 12MP và Telephoto tetraprism 5x 12MP; camera trước 12MP; USB‑C; khung titan; IP68.",
-        highlights: "Zoom quang 5x, màn hình lớn và thiết kế titan; phù hợp chụp ảnh xa, quay video và giải trí.",
-        status: "Còn hàng • Hỗ trợ trả góp 0%"
-      },
-      {
-        id: 22,
-        name: "iPhone 14 Pro",
-        group: "iphone",
-        subGroup: "iphone-15-14",
-        label: "Tiết kiệm",
-        visualType: "iphone-pro",
-        shortDesc: "Màn hình 6,1\" Dynamic Island • Chip A16 Bionic",
-        image: "images/iphone 14 pro.jpg",
-        colors: ["Đen Ánh Thép", "Bạc", "Vàng", "Tía Đậm"],
-        storage: [
-          { size: "128GB", price: 14690000 },
-          { size: "256GB", price: 15890000 },
-          { size: "512GB", price: 17290000 },
-          { size: "1TB", price: 17990000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,1 inch; ProMotion 120Hz; chip A16 Bionic; camera chính 48MP, Ultra Wide 12MP và Telephoto 3x 12MP; camera trước 12MP; cổng Lightning; IP68.",
-        highlights: "Dynamic Island, màn hình Luôn Bật và camera chính 48MP; là lựa chọn dòng Pro với mức giá dễ tiếp cận hơn.",
-        status: "Còn hàng • Bảo hành đầy đủ"
-      },
-      {
-        id: 23,
-        name: "iPhone 14 Pro Max",
-        group: "iphone",
-        subGroup: "iphone-15-14",
-        label: "Pro Max Giá Tốt",
-        visualType: "iphone-promax",
-        shortDesc: "Màn hình 6,7\" Always-On • Chip A16 Bionic • Camera 48MP",
-        image: "images/iphone 14 promax.jpg",
-        colors: ["Đen Ánh Thép", "Bạc", "Vàng", "Tía Đậm"],
-        storage: [
-          { size: "128GB", price: 17490000 },
-          { size: "256GB", price: 18990000 },
-          { size: "512GB", price: 17499000 },
-          { size: "1TB", price: 18190000 }
-        ],
-        specs: "Màn hình OLED Super Retina XDR 6,7 inch; ProMotion 120Hz; chip A16 Bionic; camera chính 48MP, Ultra Wide 12MP và Telephoto 3x 12MP; camera trước 12MP; cổng Lightning; IP68.",
-        highlights: "Màn hình lớn, Dynamic Island, màn hình Luôn Bật và camera 48MP; phù hợp người thích màn hình rộng và trải nghiệm dòng Pro Max.",
-        status: "Còn hàng • Số lượng có hạn"
-      },
+    id: 23,
+    name: "iPhone 14 Pro Max",
+    group: "iphone",
+    subGroup: "iphone-15-14",
+    label: "Pro Max Giá Tốt",
+    visualType: "iphone-promax",
+    shortDesc: "Màn hình 6,7\" Always-On • Chip A16 Bionic • Camera 48MP",
+
+    image: "images/ip 14 pro den.jpg",
+
+    colors: ["Đen Ánh Thép", "Bạc", "Vàng", "Tía Đậm"],
+
+    colorImages: {
+        "Đen Ánh Thép": "images/ip 14 pro den.jpg",
+        "Bạc": "images/ip 14 pro bac.jpg",
+        "Vàng": "images/ip 14 pro vang.jpg",
+        "Tía Đậm": "images/iphone 14 promax.jpg"
+    },
+
+    storage: [
+    { size: "128GB", price: 17490000 },
+    { size: "256GB", price: 18990000 },
+    { size: "512GB", price: 20490000 },
+    { size: "1TB", price: 21990000 }
+],
+
+    specs: "Màn hình OLED Super Retina XDR 6,7 inch; ProMotion 120Hz; chip A16 Bionic; camera chính 48MP, Ultra Wide 12MP và Telephoto 3x 12MP; camera trước 12MP; cổng Lightning; IP68.",
+
+    highlights: "Màn hình lớn, Dynamic Island, màn hình Luôn Bật và camera 48MP; phù hợp người thích màn hình rộng và trải nghiệm dòng Pro Max.",
+
+    status: "Còn hàng • Số lượng có hạn"
+},
 
       // ================= 8 PHỤ KIỆN APPLE =================
       {
@@ -1105,22 +1237,34 @@
         status: "Mới 100%, chính hãng Apple Việt Nam"
       },
       {
-        id: 34,
-        name: "AirPods Max 2",
-        group: "accessory",
-        subGroup: "airpods",
-        label: "Hi-Fi Studio",
-        visualType: "airpods-max",
-        shortDesc: "Chụp tai cao cấp • Chống ồn chủ động • USB-C • Pin 20h",
-        colors: ["Đen", "Bạc", "Xanh Lam Đậm", "Cam Vũ Trụ"],
-        image: "images/Airpods max 2.jpg",
-        storage: [
-          { size: "Bản USB-C", price: 14999000 }
-        ],
-        specs: "Tai nghe chụp tai; chống ồn chủ động; âm thanh không gian; USB-C; pin tối đa 20 giờ khi bật chống ồn.",
-        highlights: "Thiết kế chụp tai cao cấp, âm thanh chi tiết, phù hợp làm việc và giải trí.",
-        status: "Mới 100%, chính hãng Apple Việt Nam"
-      },
+    id: 34,
+    name: "AirPods Max 2",
+    group: "accessory",
+    subGroup: "airpods",
+    label: "Hi-Fi Studio",
+    visualType: "airpods-max",
+    shortDesc: "Chụp tai cao cấp • Chống ồn chủ động • USB-C • Pin 20h",
+
+    image: "images/Airpods max 2.jpg",
+
+    colors: ["Đen", "Trắng", "Vàng Ánh Sao"],
+
+    colorImages: {
+        "Đen": "images/Airpods max 2.jpg",
+        "Trắng": "images/airpod max 2 bac.jpg",
+        "Vàng Ánh Sao": "images/airpod max 2 vang.jpg"
+    },
+
+    storage: [
+        { size: "Bản USB-C", price: 14999000 }
+    ],
+
+    specs: "Tai nghe chụp tai; chống ồn chủ động; âm thanh không gian; USB-C; pin tối đa 20 giờ khi bật chống ồn.",
+
+    highlights: "Thiết kế chụp tai cao cấp, âm thanh chi tiết, phù hợp làm việc và giải trí.",
+
+    status: "Mới 100%, chính hãng Apple Việt Nam"
+},
       {
         id: 29,
         name: "Bộ sạc Apple USB-C 20W",
@@ -1156,25 +1300,49 @@
         highlights: "Cuộn và vuốt trực quan; thiết kế tối giản sang trọng.",
         status: "Sản phẩm mới chính hãng từ Apple"
       },
-      {
-        id: 11,
-        name: "Ốp lưng iPhone",
-        group: "accessory",
-        subGroup: "other-acc",
-        label: "Phụ kiện",
-        visualType: "case",
-        isCombo: true,
-        shortDesc: "Bảo vệ toàn diện • Tương thích MagSafe",
-        oldPrice: 590000,
-        colors: ["Đen", "Bạc", "Xanh Lam Đậm", "Cam Vũ Trụ"],
-        image: "images/Op lung iphone.jpg",
-        storage: [
-          { size: "Tiêu chuẩn", price: 490000 }
-        ],
-        specs: "Ốp lưng thiết kế vừa vặn cho các dòng iPhone Pro / Pro Max; chống trầy xước và va đập nhẹ.",
-        highlights: "Nhiều mẫu và màu sắc đồng bộ với iPhone, cầm nắm chắc tay.",
-        status: "Sẵn hàng nhiều kích cỡ dòng Pro / Pro Max"
-      },
+     {
+    id: 11,
+    name: "Ốp lưng iPhone",
+    group: "accessory",
+    subGroup: "other-acc",
+    label: "Phụ kiện",
+    visualType: "case",
+    isCombo: true,
+    shortDesc: "Bảo vệ toàn diện • Tương thích MagSafe",
+
+    oldPrice: 590000,
+
+    image: "images/Op lung iphone.jpg",
+
+    colors: ["Đen", "Bạc", "Vàng"],
+
+    colorImages: {
+        "Đen": "images/Op lung iphone.jpg",
+        "Bạc": "images/op lung bac.jpg",
+        "Vàng": "images/op lung vang.jpg"
+    },
+
+    storage: [
+        { size: "Tiêu chuẩn", price: 490000 }
+    ],
+
+    compatibleModels: [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max"
+    ],
+
+    specs: "Ốp lưng thiết kế vừa vặn cho các dòng iPhone Pro / Pro Max; chống trầy xước và va đập nhẹ.",
+
+    highlights: "Nhiều màu sắc, thiết kế đồng bộ với iPhone, cầm nắm chắc tay.",
+
+    status: "Sẵn hàng nhiều kích cỡ dòng Pro / Pro Max"
+},
       {
         id: 12,
         name: "Cáp sạc USB-C",
@@ -1559,15 +1727,20 @@
     let modalState = { productId: null, colorIndex: 0, storageIndex: 0 };
 
     function openProductModal(productId) {
-      const p = products.find(x => x.id === productId);
-      if (!p) return;
+    const p = products.find(x => x.id === productId);
+    if (!p) return;
+    if (productId === 11) selectedCaseModel = "";
 
-      const currentCardSel = cardSelections[productId] || { colorIndex: 0, storageIndex: 0 };
-      modalState = {
+    const currentCardSel = cardSelections[productId] || {
+        colorIndex: 0,
+        storageIndex: 0
+    };
+
+    modalState = {
         productId: p.id,
         colorIndex: currentCardSel.colorIndex,
         storageIndex: currentCardSel.storageIndex
-      };
+    };
 
       document.getElementById("modalCategoryBadge").textContent = p.group === "iphone" ? "Điện thoại iPhone" : "Phụ kiện Apple";
       document.getElementById("modalLabelBadge").textContent = p.label;
@@ -1586,9 +1759,13 @@
       const selectedStorage = p.storage[modalState.storageIndex];
       const colorHex = colorHexMap[selectedColor] || "#8bbbe8";
 
-      const visualHtml = p.image
-        ? `<img src="${p.image}" alt="${p.name}" class="w-56 h-52 object-contain mx-auto" onerror="handleImgFallback(this, '${p.visualType}', '${colorHex}', '${p.name}')" />`
-        : getProductGraphicSVG(p.visualType, colorHex, p.name);
+      const selectedImage = p.colorImages?.[selectedColor] || p.image;
+
+const visualHtml = selectedImage
+  ? `<img src="${selectedImage}" alt="${p.name} - ${selectedColor}"
+       class="w-56 h-52 object-contain mx-auto"
+       onerror="handleImgFallback(this, '${p.visualType}', '${colorHex}', '${p.name}')" />`
+  : getProductGraphicSVG(p.visualType, colorHex, p.name);
 
       const colorsHtml = p.colors.map((cName, idx) => {
         const hex = colorHexMap[cName] || "#8bbbe8";
@@ -1620,7 +1797,27 @@
           </button>
         `;
       }).join("");
+// Danh sách phiên bản iPhone dành riêng cho ốp lưng
+const caseModelHtml = p.id === 11 ? `
+    <div>
+        <div class="text-xs font-extrabold text-[#174978] uppercase mb-2">
+            3. Chọn dòng iPhone tương thích:
+        </div>
 
+        <select
+            id="caseModelSelect"
+            onchange="selectedCaseModel = this.value"
+            class="w-full p-3 rounded-xl border border-[#cfe4fa] bg-white text-sm font-semibold text-[#174978] outline-none focus:border-[#3b8fe6]"
+        >
+            <option value="">-- Chọn phiên bản iPhone --</option>
+            ${p.compatibleModels.map(model => `
+                <option value="${model}" ${selectedCaseModel === model ? "selected" : ""}>
+                    ${model}
+                </option>
+            `).join("")}
+        </select>
+    </div>
+` : "";
       document.getElementById("productModalBody").innerHTML = `
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
           <!-- Cột trái: Hình ảnh & Điểm nổi bật -->
@@ -1660,7 +1857,7 @@
                 ${colorsHtml}
               </div>
             </div>
-
+${caseModelHtml}
             <!-- Thông số kỹ thuật -->
             <div class="bg-[#edf6ff] rounded-2xl p-3.5 border border-[#cfe4fa]">
               <div class="text-xs font-extrabold text-[#143d66] mb-1"><i class="fa-solid fa-microchip text-[#3b8fe6] mr-1.5"></i>Thông số kỹ thuật nổi bật:</div>
@@ -1669,10 +1866,10 @@
 
             <!-- Nút Thêm vào giỏ hàng -->
             <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
-              <button 
-                onclick="addToCart(${p.id}, ${modalState.colorIndex}, ${modalState.storageIndex}); closeProductModal();" 
-                class="flex-1 bg-[#3b8fe6] hover:bg-[#2574c9] text-white font-extrabold py-3.5 px-5 rounded-2xl text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-2"
-              >
+              <button
+    onclick="addCurrentProductToCart()"
+    class="flex-1 bg-[#3b8fe6] hover:bg-[#2574c9] text-white font-extrabold py-3.5 px-5 rounded-xl"
+>
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span>Thêm vào giỏ (${selectedStorage.size} • ${selectedColor})</span>
               </button>
@@ -1682,7 +1879,25 @@
       `;
     }
 
-    function updateModalSelection(type, index) {
+    function addCurrentProductToCart() {
+    const p = products.find(x => x.id === modalState.productId);
+    if (!p) return;
+
+    if (p.id === 11 && !selectedCaseModel) {
+        showToast("Vui lòng chọn dòng iPhone tương thích!");
+        return;
+    }
+
+    addToCart(
+        p.id,
+        modalState.colorIndex,
+        modalState.storageIndex,
+        p.id === 11 ? selectedCaseModel : ""
+    );
+
+    closeProductModal();
+}
+function updateModalSelection(type, index) {
       if (type === "color") {
         modalState.colorIndex = index;
         cardSelections[modalState.productId].colorIndex = index;
@@ -1701,33 +1916,41 @@
     }
 
     // ================= GIỎ HÀNG THÔNG MINH (CART DRAWER) =================
-    function addToCart(productId, colorIndex = 0, storageIndex = 0) {
-      const p = products.find(x => x.id === productId);
-      if (!p) return;
+    function addToCart(productId, colorIndex = 0, storageIndex = 0, caseModel = "") {
+    const p = products.find(x => x.id === productId);
+    if (!p) return;
 
-      const color = p.colors[colorIndex] || p.colors[0];
-      const storageObj = p.storage[storageIndex] || p.storage[0];
-      const itemKey = `${p.id}_${color}_${storageObj.size}`;
-
-      const existing = cart.find(item => item.key === itemKey);
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({
-          key: itemKey,
-          id: p.id,
-          name: p.name,
-          color: color,
-          size: storageObj.size,
-          price: storageObj.price,
-          qty: 1,
-          visualType: p.visualType
-        });
-      }
-
-      updateCartUI();
-      showToast(`Đã thêm ${p.name} (${storageObj.size} - ${color}) vào giỏ`);
+    if (p.id === 11 && !caseModel) {
+        showToast("Vui lòng chọn dòng iPhone tương thích!");
+        return;
     }
+
+    const color = p.colors[colorIndex] || p.colors[0];
+    const storageObj = p.storage[storageIndex] || p.storage[0];
+
+    const itemKey = `${p.id}_${color}_${storageObj.size}_${caseModel}`;
+
+    const existing = cart.find(item => item.key === itemKey);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            key: itemKey,
+            id: p.id,
+            name: p.name,
+            color: color,
+            size: storageObj.size,
+            price: storageObj.price,
+            qty: 1,
+            visualType: p.visualType,
+            compatibleModel: caseModel
+        });
+    }
+
+    updateCartUI();
+    showToast(`Đã thêm ${p.name} (${caseModel ? caseModel + " - " : ""}${color}) vào giỏ`);
+}
 
     function changeCartQty(itemKey, delta) {
       const idx = cart.findIndex(item => item.key === itemKey);
@@ -1833,7 +2056,10 @@
               </div>
               <div class="flex items-center gap-1.5 mt-1">
                 <span class="inline-block w-2.5 h-2.5 rounded-full border border-[#9ec8f2]" style="background:${hex}"></span>
-                <span class="text-[11px] font-semibold text-[#5c7e9e]">${item.color} • ${item.size}</span>
+                <span class="text-[11px] font-semibold text-[#5c7e9e]">
+    ${item.color} • ${item.size}
+    ${item.compatibleModel ? `<br>Phù hợp: ${item.compatibleModel}` : ""}
+</span>
               </div>
               <div class="flex items-center justify-between mt-2">
                 <span class="text-xs font-extrabold text-[#2574c9]">${formatVND(item.price)}</span>
@@ -1892,8 +2118,9 @@
       const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
       const totalText = document.getElementById("cartFinalTotal").textContent;
 
-      const summaryItems = cart.map(i => `• ${i.name} (${i.size} - ${i.color}) x${i.qty}`).join("<br>");
-
+      const summaryItems = cart.map(i =>
+    `• ${i.name} (${i.size} - ${i.color}${i.compatibleModel ? " - Phù hợp: " + i.compatibleModel : ""}) x${i.qty}`
+).join("<br>");
       document.getElementById("orderSuccessDetails").innerHTML = `
         <div><strong>Khách hàng:</strong> ${name} (${phone})</div>
         <div><strong>Địa chỉ nhận:</strong> ${address}</div>
