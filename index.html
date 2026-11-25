@@ -1523,9 +1523,12 @@
                 <span class="text-[10px] font-extrabold uppercase bg-[#eaf4ff] border border-[#c7def7] text-[#2574c9] px-2 py-0.5 rounded-full">Mua kèm iPhone</span>
                 <span class="text-[10px] font-bold text-[#3b8fe6]">Chính hãng</span>
               </div>
-              <div class="h-28 flex items-center justify-center my-1 cursor-pointer rounded-xl bg-gradient-to-b from-[#f2f8ff] to-[#e2f0ff]" onclick="openProductModal(${item.id})">
-                ${getProductGraphicSVG(item.visualType, colorHexMap[item.colors[0]] || "#8bbbe8", item.name)}
-              </div>
+              <div class="h-28 flex items-center justify-center my-1 cursor-pointer rounded-xl bg-gradient-to-b from-[#f2f8ff] to-[#e2f0ff] overflow-hidden" onclick="openProductModal(${item.id})">
+  ${item.image
+    ? `<img src="${item.image}" alt="${item.name}" class="w-full h-full object-contain p-2" onerror="handleImgFallback(this, '${item.visualType}', '${colorHexMap[item.colors[0]] || "#8bbbe8"}', '${item.name}')" />`
+    : getProductGraphicSVG(item.visualType, colorHexMap[item.colors[0]] || "#8bbbe8", item.name)
+  }
+</div>
               <h4 onclick="openProductModal(${item.id})" class="cursor-pointer font-extrabold text-sm text-[#143d66] hover:text-[#2574c9] line-clamp-1 mt-2">${item.name}</h4>
               <p class="text-[11px] text-[#5c7e9e] line-clamp-2 mt-0.5">${item.shortDesc}</p>
             </div>
