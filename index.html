@@ -243,40 +243,49 @@
               <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-[#b8dafc] to-[#e8f3ff] border border-[#9ec8f2]/70 shadow-inner flex items-center justify-center"></div>
               
               <!-- Minh họa iPhone Duo (Gập mở rộng phía sau - tông xanh băng) -->
-              <div onclick="openProductModal(1)" class="cursor-pointer absolute left-2 sm:left-4 top-6 w-40 h-56 rounded-3xl bg-gradient-to-b from-[#e9f4ff] to-[#c6e0fa] p-2 border-2 border-[#8bbbe8] shadow-lg transform -rotate-12 hover:scale-105 transition-transform">
-                <div class="w-full h-full rounded-2xl bg-gradient-to-br from-[#d6ebff] via-[#b3d7fc] to-[#8fc3f7] p-3 flex flex-col justify-between relative overflow-hidden border border-white/70">
-                  <div class="absolute inset-y-0 left-1/2 w-[1.5px] bg-[#6aaae8]/50"></div>
-                  <span class="bg-white/85 text-[#174978] text-[9px] font-extrabold px-2 py-0.5 rounded-full w-fit border border-[#b8dafc]">iPhone Duo 7.6"</span>
-                  <div class="text-center my-auto">
-                    <i class="fa-brands fa-apple text-[#174978] text-3xl"></i>
-                    <p class="text-[10px] font-bold text-[#174978] mt-1">Foldable OLED</p>
-                  </div>
-                  <div class="text-[9px] text-[#1b5796] font-bold text-center">Chip A20 Pro</div>
-                </div>
-              </div>
+          <!-- iPhone Duo - Phía sau -->
+<div onclick="openProductModal(1)"
+     class="group absolute -left-3 sm:-left-2 top-3 w-60 h-80 z-10
+            cursor-pointer transform -rotate-12
+            hover:-translate-y-3 hover:scale-105 hover:z-30 hover:rotate-[-6deg]
+            transition-all duration-500 ease-out">
+
+    <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden
+                bg-[#e0f0ff] border-2 border-white/90
+                shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)]
+                group-hover:shadow-[0_30px_60px_-10px_rgba(37,99,235,0.4)]
+                transition-all duration-500">
+
+        <!-- Lớp phủ ánh sáng kính -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 pointer-events-none z-10"></div>
+
+        <img src="images/duo.jpg"
+             alt="iPhone Duo"
+             class="w-full h-full object-cover object-center
+                    scale-[1.02] group-hover:scale-105
+                    transition-transform duration-500 ease-out" />
+    </div>
+</div>
 
               <!-- Minh họa iPhone 18 Pro Max (Phía trước nổi bật - tông xanh dương nhạt/xanh băng & viền bạc xanh) -->
-              <div onclick="openProductModal(3)" class="cursor-pointer animate-phone relative z-10 ml-16 sm:ml-20 w-44 sm:w-48 h-72 sm:h-80 rounded-[36px] bg-gradient-to-b from-[#e9f4ff] to-[#c6e0fa] p-2.5 border-2 border-[#8bbbe8] shadow-[0_20px_40px_-12px_rgba(37,116,201,0.28)]">
-                <!-- Dynamic Island -->
-                <div class="w-16 h-4 bg-[#9ec8f2] border border-[#7cb0e3] rounded-full mx-auto mb-1.5 flex items-center justify-end px-1.5">
-                  <span class="w-2 h-2 rounded-full bg-[#2574c9]"></span>
-                </div>
-                <div class="w-full h-[calc(100%-22px)] rounded-[26px] bg-gradient-to-b from-[#f4f9ff] via-[#d7ebff] to-[#b5d8fc] p-3.5 flex flex-col justify-between text-center relative overflow-hidden border border-white/80">
-                  <div>
-                    <span class="text-[10px] uppercase tracking-widest text-[#2574c9] font-extrabold">Pro Max</span>
-                    <h3 class="text-sm font-extrabold text-[#143d66] mt-0.5">iPhone 18</h3>
-                  </div>
-                  <div class="my-auto">
-                    <div class="w-14 h-14 rounded-2xl bg-white/80 mx-auto flex items-center justify-center border border-[#b8dafc] shadow-2xs">
-                      <i class="fa-brands fa-apple text-3xl text-[#2574c9]"></i>
-                    </div>
-                    <p class="text-[10px] text-[#1b5796] mt-2 font-semibold">6.9" Super Retina XDR</p>
-                  </div>
-                  <div class="bg-white/85 border border-[#c7def7] rounded-xl py-1.5 px-2 text-[10px] font-extrabold text-[#174978]">
-                    Camera Fusion 48MP
-                  </div>
-                </div>
-              </div>
+              <!-- iPhone 18 Pro Max - Phía trước -->
+<div onclick="openProductModal(3)"
+     class="group cursor-pointer animate-phone relative z-20 ml-16 sm:ml-20
+            w-44 sm:w-48 h-72 sm:h-80 rounded-[36px] overflow-hidden
+            bg-[#dbeafe] border-2 border-white/90
+            shadow-[0_20px_40px_-12px_rgba(37,116,201,0.32)]
+            hover:-translate-y-2 hover:scale-105
+            transition-all duration-500 ease-out">
+
+    <!-- Lớp phủ ánh sáng kính -->
+    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 pointer-events-none z-10"></div>
+
+    <img src="images/iphone 18prm.png"
+         alt="iPhone 18 Pro Max"
+         class="w-full h-full object-cover object-center
+                scale-[1.02] group-hover:scale-105
+                transition-transform duration-500 ease-out" />
+</div>
 
               <!-- Badge nổi -->
               <div class="absolute bottom-2 right-0 sm:right-2 z-20 bg-white text-[#174978] rounded-2xl px-3.5 py-2 shadow-md border border-[#cfe4fa]">
